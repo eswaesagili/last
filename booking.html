@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book a Ticket</title>
+</head>
+<body>
+	<h1>Book a Ticket</h1>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	<ul>
+		{% for message in messages %}
+		<li>{{ message }}</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+	{% endwith %}
+	<form method="POST" action="{{ url_for('booking') }}">
+		<label for="movie">Select a movie:</label>
+		<select name="movie" id="movie">
+			{% for movie in movies %}
+			<option value="{{ movie[0] }}">{{ movie[1] }}</option>
+			{% endfor %}
+		</select>
+		<br>
+		<label for="theater">Select a theater:</label>
+		<select name="theater" id="theater">
+			{% for theater in theaters %}
+			<option value="{{ theater[0] }}">{{ theater[1] }}</option>
+			{% endfor %}
+		</select>
+         <label for="submit">book tickets:
+            <input type="submit" value="Send" class="submit-btn" />
+            </label>
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Ticket Booking System</title>
+</head>
+<body>
+	<h1>Welcome to the Movie Ticket Booking System!</h1>
+	<ul>
+		<li><a href="{{ url_for('movies') }}">View movies</a></li>
+		<li><a href="{{ url_for('theaters') }}">View theaters</a></li>
+		<li><a href="{{ url_for('booking') }}">Book a ticket</a></li>
+		<li><a href="{{ url_for('cancel') }}">Cancel a ticket</a></li>
+	</ul>
+</body>
+</html>

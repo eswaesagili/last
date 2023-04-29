@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Booking Confirmation</h1>
+  <p>Thank you for reserving your tickets!</p>
+  <table>
+    <tr>
+      <th>Movie:</th>
+      <td>{{ booking_details[0] }}</td>
+    </tr>
+    <tr>
+      <th>Theater:</th>
+      <td>{{ booking_details[1] }}</td>
+    </tr>
+    <tr>
+      <th>Number of tickets:</th>
+      <td>{{ booking_details[2] }}</td>
+    </tr>
+    <tr>
+      <th>Total price:</th>
+      <td>${{ booking_details[3] }}</td>
+    </tr>
+  </table>
+{% endblock %}

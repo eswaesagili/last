@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Listing</title>
+</head>
+<body>
+	<h1>Movie Listing</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+                <th>Name</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Capacity</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for theater in theaters %}
+			<tr>
+				<td>{{ theater[0] }}</td>
+				<td>{{ theater[1] }}</td>
+				<td>{{ theater[2] }}</td>
+				<td>{{ theater[3] }}</td>
+                <td>{{ theater[4] }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>
